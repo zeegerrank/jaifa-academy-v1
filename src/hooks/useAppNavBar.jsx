@@ -5,7 +5,7 @@ function useAppNavBar() {
 
   const handleOpen = () => setOpen((pr) => !pr);
 
-  return { open, handleOpen };
+  return { open, setOpen, handleOpen };
 }
 
 export default useAppNavBar;

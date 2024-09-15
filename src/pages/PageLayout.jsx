@@ -1,13 +1,13 @@
 import { Outlet } from "react-router-dom";
-import AppNavBar from "../components/app-nav-bar/AppNavBar";
+import AppNavBar from "../components/header/app-nav-bar/AppNavBar";
 import { twMerge } from "tailwind-merge";
-import Logo from "../components/Logo";
+import Logo from "../components/header/Logo";
 function PageLayout() {
   return (
     <>
       <header
         className={twMerge(
-          "bg-blue-400 transition-all duration-300",
+          "bg z-20 bg-blue-400 transition-all duration-300",
           "flex justify-center",
           "sm:items-center sm:justify-around",
         )}
@@ -15,7 +15,7 @@ function PageLayout() {
         <Logo />
         <AppNavBar className="" />
       </header>
-      <main className="container px-24">
+      <main className="container z-20 py-4 sm:px-16">
         <Outlet />
       </main>
     </>

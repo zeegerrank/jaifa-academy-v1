@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 import { twMerge } from "tailwind-merge";
-import useAppNavBar from "../../hooks/useAppNavBar";
+import useAppNavBar from "../../../hooks/useAppNavBar";
 import HamburgurMenu from "./HamburgurMenu";
-import nav_menu from "../../data/nav_menu.json";
+import nav_menu from "../../../data/nav_menu.json";
 import PropTypes from "prop-types";
 
 AppNavBar.propTypes = {
@@ -13,13 +13,14 @@ function AppNavBar({ className }) {
   /** For Button Padding Adjustment
    * You are suppose to change at Link classname to appropriate size
    */
-  const { open, handleOpen } = useAppNavBar();
+  const { open, setOpen, handleOpen } = useAppNavBar();
 
   return (
     <nav
       className={twMerge(
-        "absolute inset-0 h-screen w-screen overflow-hidden",
+        "absolute inset-0 z-10 h-screen w-auto overflow-hidden transition-all",
         "sm:static sm:h-auto sm:w-auto",
+        !open && "h-[100px]",
         className,
       )}
     >
@@ -43,6 +44,7 @@ function AppNavBar({ className }) {
               )}
               to={each.to}
               key={i}
+              onClick={() => setOpen(false)}
             >
               {each.label}
             </Link>

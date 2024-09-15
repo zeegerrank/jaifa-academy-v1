@@ -8,11 +8,7 @@ function Logo() {
         "transition-all duration-500 hover:rotate-2 hover:scale-110",
       )}
     >
-      <img
-        className="object-contain"
-        src="../../public/jaifa-academy_logo.png"
-        alt=""
-      />
+      <img className="object-contain" src="/jaifa-academy_logo.png" alt="" />
     </Link>
   );
 }
