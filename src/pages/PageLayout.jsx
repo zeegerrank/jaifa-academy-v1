@@ -7,7 +7,7 @@ function PageLayout() {
     <>
       <header
         className={twMerge(
-          "bg-prime-100 z-20 transition-all duration-300",
+          "z-20 bg-prime-100 transition-all duration-300",
           "flex justify-center",
           "sm:items-center sm:justify-around",
         )}
@@ -15,7 +15,7 @@ function PageLayout() {
         <Logo />
         <AppNavBar className="" />
       </header>
-      <main className="container z-20 py-5 sm:px-16">
+      <main className="container z-20 py-5">
         <Outlet />
       </main>
     </>

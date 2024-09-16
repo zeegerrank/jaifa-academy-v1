@@ -4,10 +4,10 @@ import AddressBox from "../components/contact/AddressBox";
 
 function Contact() {
   return (
-    <div className={twMerge("flex flex-col items-center")}>
+    <div className={twMerge("flex flex-col items-center px-16")}>
       <h1
         className={twMerge(
-          "text-accent-100 mb-4 text-3xl font-bold",
+          "mb-4 text-3xl font-bold text-accent-100",
           "sm:mb-3",
         )}
       >
@@ -50,9 +50,9 @@ function Contact() {
             </div>
             <div className="mt-3 flex w-full flex-col items-center justify-center gap-2 sm:ml-5 sm:items-start sm:justify-start">
               <Link>
-                <div className="bg-accent-100/30 ring-accent-100/70 flex items-center gap-2 rounded px-1 py-[2px] ring">
+                <div className="flex items-center gap-2 rounded bg-accent-100/30 px-1 py-[2px] ring ring-accent-100/70">
                   <i className="fa-solid fa-square-phone-flip fa-2x text-accent-100"></i>{" "}
-                  <span className="text-accent-100 text-xs">
+                  <span className="text-xs text-accent-100">
                     Office: 095-638-4529
                     <br />
                     avilable 08.00 - 17.00
