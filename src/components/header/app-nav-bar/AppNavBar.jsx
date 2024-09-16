@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { twMerge } from "tailwind-merge";
 import useAppNavBar from "../../../hooks/useAppNavBar";
 import HamburgurMenu from "./HamburgurMenu";
@@ -15,10 +15,13 @@ function AppNavBar({ className }) {
    */
   const { open, setOpen, handleOpen } = useAppNavBar();
 
+  const location = useLocation();
+  const currPage = location.pathname.split("/")[1];
+
   return (
     <nav
       className={twMerge(
-        "absolute inset-0 z-10 h-screen w-auto overflow-hidden transition-all",
+        "absolute inset-0 z-10 h-screen w-auto overflow-hidden transition-all duration-150",
         "sm:static sm:h-auto sm:w-auto",
         !open && "h-[100px]",
         className,
@@ -39,8 +42,10 @@ function AppNavBar({ className }) {
             <Link
               className={twMerge(
                 "bg-prime-100 text-accent-200 flex h-dvh items-center justify-center text-sm font-semibold",
-                "hover:bg-prime-200 transition-all duration-700 sm:hover:shadow",
-                "sm:bg-prime-100 sm:h-auto sm:px-8",
+                "border-b-accent-100 border-b-2",
+                "hover:bg-prime-200 hover:sm:border-accent-100 hover:sm:border- transition-all duration-100 hover:sm:border-b-4 hover:sm:shadow",
+                "sm:bg-prime-100 sm:h-auto sm:border-0 sm:px-8",
+                each.to === currPage && "underline underline-offset-8",
               )}
               to={each.to}
               key={i}

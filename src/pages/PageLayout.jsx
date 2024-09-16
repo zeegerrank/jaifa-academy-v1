@@ -15,7 +15,7 @@ function PageLayout() {
         <Logo />
         <AppNavBar className="" />
       </header>
-      <main className="container z-20 py-4 sm:px-16">
+      <main className="container z-20 py-5 sm:px-16">
         <Outlet />
       </main>
     </>

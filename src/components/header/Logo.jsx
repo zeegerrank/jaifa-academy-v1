@@ -4,7 +4,7 @@ function Logo() {
   return (
     <Link
       className={twMerge(
-        "flex h-[100px] w-[100px] items-center",
+        "flex h-[100px] w-[100px] items-center sm:ml-6",
         "transition-all duration-500 hover:rotate-2 hover:scale-110",
       )}
     >

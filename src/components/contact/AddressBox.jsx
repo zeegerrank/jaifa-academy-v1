@@ -26,8 +26,9 @@ function AddressBox({ children: address }) {
         id="address-box"
         onClick={handleCopyAdress}
         className={twMerge(
-          "bg-prime-100 ring-accent-100/30 relative mt-2 w-[320px] cursor-pointer rounded shadow ring",
-          "active:ring-accent-200/70 group transition-all duration-300 active:ring-4",
+          "bg-accent-100/30 ring-accent-100/70 relative mt-2 w-[320px] cursor-pointer rounded shadow ring",
+          "active:ring-accent-100 group transition-all duration-300 active:ring-4",
+          "sm:ml-5 sm:mt-0 sm:w-auto",
         )}
       >
         <h3
@@ -41,7 +42,10 @@ function AddressBox({ children: address }) {
         <div id="box-to-copy" className="inset-0 flex justify-between">
           <p className="text-accent-100 p-2 text-sm">{address}</p>
           <button
-            className={twMerge("bg-accent-100 h-9 w-9 rounded", "duration-75")}
+            className={twMerge(
+              "bg-accent-100 absolute bottom-0 right-0 h-8 w-8 rounded",
+              "duration-75",
+            )}
           >
             <i
               className={twMerge(
@@ -53,10 +57,10 @@ function AddressBox({ children: address }) {
         </div>
         <motion.div
           className={twMerge(
-            "text-accent-100 absolute inset-0 left-36 top-5 font-extrabold",
+            "text-accent-100 absolute right-14 top-5 font-extrabold",
           )}
           animate={show ? "show" : "gone"}
-          variants={{ show: { scale: 1.2 }, gone: { opacity: 0 } }}
+          variants={{ show: { scale: 1.5 }, gone: { opacity: 0 } }}
         >
           Copied
         </motion.div>

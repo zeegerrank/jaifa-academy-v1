@@ -9,7 +9,7 @@ export default {
           200: "#8ce0f7",
         },
         complementary: { 100: "#fcf6d3", 200: "#fbf2c0" },
-        accent: { 100: "#550c18", 200: "#3b0811" },
+        accent: { 100: "#091540", 200: "#060f2d" },
       },
     },
     plugins: [],
