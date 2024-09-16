@@ -22,13 +22,13 @@ function Contact() {
             loading="lazy"
             className={twMerge(
               "h-72 w-[320px] rounded-lg shadow",
-              "lg:w-[480px]",
+              "lg:w-[640px]",
             )}
           ></iframe>
         </div>
         <div
           className={twMerge(
-            "flex w-full flex-col items-center justify-between sm:items-end",
+            "flex w-full flex-col items-center justify-between sm:items-start",
             "sm:w-full",
           )}
         >
@@ -38,7 +38,7 @@ function Contact() {
           <div className="mx-auto flex w-full flex-col">
             <div
               className={twMerge(
-                "mt-3 flex items-center justify-around gap-3 sm:justify-end",
+                "mt-3 flex items-center justify-around gap-3 sm:ml-5 sm:justify-start",
               )}
             >
               <Link>
@@ -48,7 +48,7 @@ function Contact() {
                 <i className="fa-brands fa-facebook fa-3x text-accent-100"></i>
               </Link>
             </div>
-            <div className="mt-3 flex w-full flex-col items-center justify-center gap-2 sm:items-end sm:justify-end">
+            <div className="mt-3 flex w-full flex-col items-center justify-center gap-2 sm:ml-5 sm:items-start sm:justify-start">
               <Link>
                 <div className="bg-accent-100/30 ring-accent-100/70 flex items-center gap-2 rounded px-1 py-[2px] ring">
                   <i className="fa-solid fa-square-phone-flip fa-2x text-accent-100"></i>{" "}

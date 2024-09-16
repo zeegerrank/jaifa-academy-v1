@@ -2,9 +2,10 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import PageLayout from "./pages/PageLayout";
 import Home from "./pages/Home";
 import About from "./pages/About";
-import Contact from "./pages/Contact";
 import News from "./pages/News";
 import Career from "./pages/Career";
+import Inquire from "./pages/Inquire";
+import Contact from "./pages/Contact";
 
 function App() {
   const router = createBrowserRouter([
@@ -13,9 +14,10 @@ function App() {
       children: [
         { element: <Home />, index: true },
         { element: <About />, path: "about" },
-        { element: <Contact />, path: "contact" },
         { element: <News />, path: "news" },
         { element: <Career />, path: "career" },
+        { element: <Inquire />, path: "inquire" },
+        { element: <Contact />, path: "contact" },
       ],
     },
   ]);

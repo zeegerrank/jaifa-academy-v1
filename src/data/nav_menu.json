@@ -1,7 +1,8 @@
 [
   { "label": "Home", "to": "/" },
-  { "label": "About", "to": "about" },
-  { "label": "Contact", "to": "contact" },
   { "label": "News", "to": "news" },
-  { "label": "Career", "to": "career" }
+  { "label": "Career", "to": "career" },
+  { "label": "About", "to": "about" },
+  { "label": "Inquire", "to": "inquire" },
+  { "label": "Contact", "to": "contact" }
 ]

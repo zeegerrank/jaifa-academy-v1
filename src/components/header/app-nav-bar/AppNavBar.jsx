@@ -30,7 +30,7 @@ function AppNavBar({ className }) {
       {/* this is where you adjust hight of button navbar */}
       <ul
         className={twMerge(
-          "absolute z-0 flex flex-col",
+          "absolute z-0 flex flex-col sm:flex-wrap",
           "h-screen w-screen justify-around",
           "transition-all duration-700",
           open ? "left-0" : "left-full",
@@ -43,9 +43,10 @@ function AppNavBar({ className }) {
               className={twMerge(
                 "bg-prime-100 text-accent-200 flex h-dvh items-center justify-center text-sm font-semibold",
                 "border-b-accent-100 border-b-2",
-                "hover:bg-prime-200 hover:sm:border-accent-100 hover:sm:border- transition-all duration-100 hover:sm:border-b-4 hover:sm:shadow",
-                "sm:bg-prime-100 sm:h-auto sm:border-0 sm:px-8",
-                each.to === currPage && "underline underline-offset-8",
+                "hover:bg-prime-200 hover:sm:border-accent-100 transition-all duration-150 hover:sm:border-b-4 hover:sm:shadow",
+                "sm:bg-prime-100 sm:border-b-accent-100/10 sm:h-auto sm:border-b-2 sm:px-8",
+                each.to === currPage &&
+                  "underline underline-offset-8 hover:underline-offset-2",
               )}
               to={each.to}
               key={i}
