@@ -38,9 +38,9 @@ function AppNavBar({ className }) {
           return (
             <Link
               className={twMerge(
-                "flex h-dvh items-center justify-center bg-blue-500 text-sm",
-                "transition-all duration-700 hover:bg-blue-300 sm:hover:shadow",
-                "sm:h-auto sm:bg-blue-400 sm:px-8",
+                "bg-prime-100 text-accent-200 flex h-dvh items-center justify-center text-sm font-semibold",
+                "hover:bg-prime-200 transition-all duration-700 sm:hover:shadow",
+                "sm:bg-prime-100 sm:h-auto sm:px-8",
               )}
               to={each.to}
               key={i}

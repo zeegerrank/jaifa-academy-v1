@@ -23,7 +23,7 @@ function HamburgurMenu({ onClick, open }) {
         variants={{ open: { rotate: "360deg" }, closed: { rotate: "0deg" } }}
         className={twMerge(
           "relative h-9 w-10 rounded-sm duration-100",
-          "bg-blue-200/25",
+          "bg-complementary-100/25",
         )}
       >
         <motion.span
@@ -34,7 +34,7 @@ function HamburgurMenu({ onClick, open }) {
           }}
           className={twMerge(
             "absolute left-1 top-1 h-1 w-8 rounded-full",
-            "bg-blue-800",
+            "bg-complementary-100",
           )}
         ></motion.span>
         <motion.span
@@ -45,7 +45,7 @@ function HamburgurMenu({ onClick, open }) {
           }}
           className={twMerge(
             "absolute left-1 top-4 h-1 w-8 rounded-full",
-            "bg-blue-800",
+            "bg-complementary-100",
           )}
         ></motion.span>
         <motion.span
@@ -56,7 +56,7 @@ function HamburgurMenu({ onClick, open }) {
           }}
           className={twMerge(
             "absolute left-1 top-7 h-1 w-8 rounded-full",
-            "bg-blue-800",
+            "bg-complementary-100",
           )}
         ></motion.span>
       </motion.div>

@@ -7,7 +7,7 @@ function PageLayout() {
     <>
       <header
         className={twMerge(
-          "bg z-20 bg-blue-400 transition-all duration-300",
+          "bg-prime-100 z-20 transition-all duration-300",
           "flex justify-center",
           "sm:items-center sm:justify-around",
         )}
