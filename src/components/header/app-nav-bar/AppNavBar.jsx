@@ -18,6 +18,7 @@ function AppNavBar({ className }) {
 
   const location = useLocation();
   const currPage = location.pathname.split("/")[1];
+  console.log("🚀 ~ AppNavBar ~ currPage:", currPage);
 
   return (
     <motion.nav
@@ -51,6 +52,9 @@ function AppNavBar({ className }) {
                 "transition-all duration-150 hover:bg-prime-200 hover:sm:border-b-4 hover:sm:border-accent-100 hover:sm:shadow",
                 "sm:h-auto sm:border-b-2 sm:border-b-accent-100/10 sm:bg-prime-100 sm:px-8",
                 each.to === currPage &&
+                  "underline underline-offset-8 hover:underline-offset-2",
+                currPage.length === 0 &&
+                  each.to === "/" &&
                   "underline underline-offset-8 hover:underline-offset-2",
               )}
               to={each.to}
