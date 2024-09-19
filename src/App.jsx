@@ -6,6 +6,7 @@ import News from "./pages/News";
 import Career from "./pages/Career";
 import Inquire from "./pages/Inquire";
 import Contact from "./pages/Contact";
+import HandleError from "./pages/HandleError";
 
 function App() {
   const router = createBrowserRouter([
@@ -19,6 +20,7 @@ function App() {
         { element: <Inquire />, path: "inquire" },
         { element: <Contact />, path: "contact" },
       ],
+      errorElement: <HandleError />,
     },
   ]);
 
