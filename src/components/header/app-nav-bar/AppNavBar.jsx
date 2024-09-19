@@ -4,6 +4,7 @@ import useAppNavBar from "../../../hooks/useAppNavBar";
 import HamburgurMenu from "./HamburgurMenu";
 import nav_menu from "../../../data/nav_menu.json";
 import PropTypes from "prop-types";
+import { motion } from "framer-motion";
 
 AppNavBar.propTypes = {
   className: PropTypes.string,
@@ -19,13 +20,17 @@ function AppNavBar({ className }) {
   const currPage = location.pathname.split("/")[1];
 
   return (
-    <nav
+    <motion.nav
       className={twMerge(
-        "absolute inset-0 z-10 h-screen w-auto overflow-hidden transition-all duration-150",
+        "absolute inset-0 z-10 h-screen w-auto overflow-hidden transition-all duration-200",
         "sm:static sm:h-auto sm:w-auto",
-        !open && "h-[100px]",
         className,
       )}
+      animate={open ? "open" : "closed"}
+      variants={{
+        open: { height: ["100px", "100px", "100vh"] },
+        closed: { height: "100px" },
+      }}
     >
       {/* this is where you adjust hight of button navbar */}
       <ul
@@ -41,10 +46,10 @@ function AppNavBar({ className }) {
           return (
             <Link
               className={twMerge(
-                "bg-prime-100 text-accent-200 flex h-dvh items-center justify-center text-sm font-semibold",
-                "border-b-accent-100 border-b-2",
-                "hover:bg-prime-200 hover:sm:border-accent-100 transition-all duration-150 hover:sm:border-b-4 hover:sm:shadow",
-                "sm:bg-prime-100 sm:border-b-accent-100/10 sm:h-auto sm:border-b-2 sm:px-8",
+                "flex h-dvh items-center justify-center bg-prime-100 text-sm font-semibold text-accent-200",
+                "border-b-2 border-b-accent-100",
+                "transition-all duration-150 hover:bg-prime-200 hover:sm:border-b-4 hover:sm:border-accent-100 hover:sm:shadow",
+                "sm:h-auto sm:border-b-2 sm:border-b-accent-100/10 sm:bg-prime-100 sm:px-8",
                 each.to === currPage &&
                   "underline underline-offset-8 hover:underline-offset-2",
               )}
@@ -58,7 +63,7 @@ function AppNavBar({ className }) {
         })}
       </ul>
       <HamburgurMenu onClick={handleOpen} open={open} />
-    </nav>
+    </motion.nav>
   );
 }
 
