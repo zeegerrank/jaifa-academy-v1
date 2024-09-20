@@ -5,6 +5,7 @@ import HamburgurMenu from "./HamburgurMenu";
 import nav_menu from "../../../data/nav_menu.json";
 import PropTypes from "prop-types";
 import { motion } from "framer-motion";
+import useDetectScroll from "../../../hooks/useDetectScroll";
 
 AppNavBar.propTypes = {
   className: PropTypes.string,
@@ -14,17 +15,18 @@ function AppNavBar({ className }) {
   /** For Button Padding Adjustment
    * You are suppose to change at Link classname to appropriate size
    */
-  const { open, setOpen, handleOpen } = useAppNavBar();
-
   const location = useLocation();
+  const { open, setOpen, handleOpen } = useAppNavBar();
+  const { scrollDirection, scrollPosition } = useDetectScroll();
+
   const currPage = location.pathname.split("/")[1];
-  console.log("🚀 ~ AppNavBar ~ currPage:", currPage);
 
   return (
     <motion.nav
       className={twMerge(
-        "absolute inset-0 z-10 h-screen w-auto overflow-hidden transition-all duration-200",
+        "absolute inset-0 z-20 h-screen w-auto overflow-hidden transition-all duration-200",
         "sm:static sm:h-auto sm:w-auto",
+
         className,
       )}
       animate={open ? "open" : "closed"}
@@ -36,7 +38,7 @@ function AppNavBar({ className }) {
       {/* this is where you adjust hight of button navbar */}
       <ul
         className={twMerge(
-          "absolute z-0 flex flex-col sm:flex-wrap",
+          "absolute flex flex-col sm:flex-wrap",
           "h-screen w-screen justify-around",
           "transition-all duration-700",
           open ? "left-0" : "left-full",
@@ -48,14 +50,20 @@ function AppNavBar({ className }) {
             <Link
               className={twMerge(
                 "flex h-dvh items-center justify-center bg-prime-100 text-sm font-semibold text-accent-200",
-                "border-b-2 border-b-accent-100",
-                "transition-all duration-150 hover:bg-prime-200 hover:sm:border-b-4 hover:sm:border-accent-100 hover:sm:shadow",
-                "sm:h-auto sm:border-b-2 sm:border-b-accent-100/10 sm:bg-prime-100 sm:px-8",
+                "border-b-2 border-b-accent-100/30",
+                "transition-all duration-150 hover:bg-complementary-100/10 sm:bg-prime-100/10 hover:sm:border-b-4 hover:sm:border-accent-100 hover:sm:shadow",
+                "sm:h-auto sm:border-b-2 sm:border-b-accent-100/10 sm:px-8",
                 each.to === currPage &&
-                  "underline underline-offset-8 hover:underline-offset-2",
+                  "underline underline-offset-8 hover:underline-offset-4",
                 currPage.length === 0 &&
                   each.to === "/" &&
-                  "underline underline-offset-8 hover:underline-offset-2",
+                  "underline underline-offset-8 hover:underline-offset-4",
+                scrollDirection === "up" &&
+                  scrollPosition > 100 &&
+                  "sticky top-0",
+                scrollDirection === "down" &&
+                  scrollPosition > 100 &&
+                  "sticky -top-full",
               )}
               to={each.to}
               key={i}
