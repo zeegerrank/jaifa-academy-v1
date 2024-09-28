@@ -5,11 +5,14 @@ export default {
     extend: {
       colors: {
         prime: {
-          100: "#5ad2f4",
-          200: "#8ce0f7",
+          100: "#85c1e9",
+          200: "#2980b9",
         },
-        complementary: { 100: "#fcf6d3", 200: "#fbf2c0" },
-        accent: { 100: "#091540", 200: "#060f2d" },
+        accent: {
+          100: "#11354c",
+          200: "#1a5276",
+        },
+        complementary: { 200: "#f8e38b", 100: "#faeaa8" },
       },
     },
     plugins: [],

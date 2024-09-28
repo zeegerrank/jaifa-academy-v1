@@ -24,15 +24,15 @@ function AppNavBar({ className }) {
   return (
     <motion.nav
       className={twMerge(
-        "absolute inset-0 z-20 h-screen w-auto overflow-hidden transition-all duration-200",
-        "sm:static sm:h-auto sm:w-auto",
+        "absolute inset-0 z-30 h-screen w-auto overflow-hidden transition-all duration-200",
+        "sm:static sm:h-auto sm:w-screen",
 
         className,
       )}
       animate={open ? "open" : "closed"}
       variants={{
-        open: { height: ["100px", "100px", "100vh"] },
-        closed: { height: "100px" },
+        open: { height: ["50px", "50px", "100vh"] },
+        closed: { height: "50px" },
       }}
     >
       {/* this is where you adjust hight of button navbar */}
@@ -42,17 +42,22 @@ function AppNavBar({ className }) {
           "h-screen w-screen justify-around",
           "transition-all duration-700",
           open ? "left-0" : "left-full",
-          "sm:relative sm:left-auto sm:h-[100px] sm:w-auto sm:flex-row",
+          "sm:relative sm:left-auto sm:h-[50px] sm:w-screen sm:flex-row",
         )}
       >
+        {/* for navMenuButton additional
+        please adjust 
+        Link element
+        in className sm:w-1/${} <-- in this ${} area
+        */}
         {nav_menu.map((each, i) => {
           return (
             <Link
               className={twMerge(
-                "flex h-dvh items-center justify-center bg-prime-100 text-sm font-semibold text-accent-200",
+                "flex h-dvh items-center justify-center bg-prime-100/95 text-sm font-semibold text-accent-200",
                 "border-b-2 border-b-accent-100/30",
-                "transition-all duration-150 hover:bg-complementary-100/10 sm:bg-prime-100/10 hover:sm:border-b-4 hover:sm:border-accent-100 hover:sm:shadow",
-                "sm:h-auto sm:border-b-2 sm:border-b-accent-100/10 sm:px-8",
+                "transition-all duration-150 hover:bg-complementary-100/10 hover:sm:border-b-4 hover:sm:border-accent-100 hover:sm:shadow",
+                "sm:h-auto sm:w-1/3 sm:border-b-2 sm:border-b-accent-100/10 sm:bg-prime-100/10 sm:px-8",
                 each.to === currPage &&
                   "underline underline-offset-8 hover:underline-offset-4",
                 currPage.length === 0 &&

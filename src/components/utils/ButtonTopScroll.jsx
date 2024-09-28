@@ -1,5 +1,5 @@
 import { twMerge } from "tailwind-merge";
-import useDetectScroll from "../hooks/useDetectScroll";
+import useDetectScroll from "../../hooks/useDetectScroll";
 import { useEffect, useState } from "react";
 
 function ButtonTopScroll() {
@@ -18,7 +18,7 @@ function ButtonTopScroll() {
       className={twMerge(
         "transition-all duration-700",
         show
-          ? "fixed bottom-5 right-5 animate-bounce opacity-100"
+          ? "fixed bottom-5 right-5 bg-accent-100/30 opacity-100"
           : "-bottom-full opacity-0",
       )}
     >
@@ -29,7 +29,7 @@ function ButtonTopScroll() {
           viewBox="0 0 24 24"
           strokeWidth={1.5}
           stroke="currentColor"
-          className="size-14 text-accent-100 transition-all duration-300 hover:scale-110"
+          className="size-10 text-accent-100 transition-all duration-300 hover:scale-110"
         >
           <path
             strokeLinecap="round"
@@ -37,7 +37,7 @@ function ButtonTopScroll() {
             d="m15 11.25-3-3m0 0-3 3m3-3v7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
           />
         </svg>
-        TOP
+        <strong className="text-accent-100">TOP</strong>
       </div>
     </button>
   );

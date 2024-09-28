@@ -1,0 +1,53 @@
+import { useNavigate } from "react-router-dom";
+import { twMerge } from "tailwind-merge";
+import ButtonCommon from "../utils/ButtonCommon";
+
+function IntroSection() {
+  const navigate = useNavigate();
+
+  return (
+    <section
+      className={twMerge(
+        "relative flex flex-col bg-gradient-to-b from-prime-100/60 to-accent-100/60",
+        "sm:flex-row sm:items-center sm:justify-between sm:from-prime-100 sm:to-accent-100 sm:py-5",
+      )}
+    >
+      <div className="">
+        <img
+          src="https://picsum.photos/500"
+          alt=""
+          className="absolute -z-10 h-[500px] w-screen object-cover sm:hidden"
+        />
+        <img
+          src="https://picsum.photos/600"
+          alt=""
+          className={twMerge("hidden", "sm:block")}
+        />
+      </div>
+      <div
+        className={twMerge(
+          "flex h-[500px] flex-col justify-around gap-4 px-4 text-center text-accent-100",
+          "sm:static sm:w-1/2 sm:justify-normal sm:gap-8 sm:text-start",
+        )}
+      >
+        <h1 className={twMerge("text-4xl")}>Welcome to Jaifa Academy</h1>
+
+        <h2 className={twMerge("text-xl sm:text-xl")}>
+          &#34;Where Passion Meets Opportunity&#34;
+        </h2>
+        <p className="">
+          At Jaifa Academy, we believe in nurturing talent, fostering
+          discipline, and providing the best environment for both young players
+          and football enthusiasts to thrive. Our state-of-the-art facilities
+          are designed to support not only competitive athletes but also
+          families and community members who share a passion for football.
+        </p>
+        <ButtonCommon onClick={() => navigate("contact")}>
+          About Us
+        </ButtonCommon>
+      </div>
+    </section>
+  );
+}
+
+export default IntroSection;

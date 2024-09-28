@@ -3,7 +3,7 @@ import AppNavBar from "../components/header/app-nav-bar/AppNavBar";
 import { twMerge } from "tailwind-merge";
 import Logo from "../components/header/Logo";
 import useDetectScroll from "../hooks/useDetectScroll";
-import ButtonTopScroll from "../components/ButtonTopScroll";
+import ButtonTopScroll from "../components/utils/ButtonTopScroll";
 
 function PageLayout() {
   const { scrollDirection, scrollPosition } = useDetectScroll();
@@ -14,7 +14,7 @@ function PageLayout() {
         className={twMerge(
           "z-30 bg-prime-100 transition-all duration-300",
           "flex justify-center",
-          "sm:items-center sm:justify-around",
+          "sm:flex-col sm:items-center",
           "transition-all duration-500",
           scrollDirection === "up" &&
             scrollPosition > 100 &&
@@ -27,7 +27,7 @@ function PageLayout() {
         <Logo />
         <AppNavBar className="" />
       </header>
-      <main className="relative z-20 h-[200vh] py-5">
+      <main className={twMerge("relative z-20")}>
         <Outlet />
 
         <ButtonTopScroll />
