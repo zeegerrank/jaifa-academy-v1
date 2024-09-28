@@ -8,7 +8,7 @@ function IntroSection() {
   return (
     <section
       className={twMerge(
-        "relative flex flex-col bg-gradient-to-b from-prime-100/60 to-accent-100/60",
+        "relative flex flex-col bg-gradient-to-b from-prime-100/70 to-accent-100/70 py-0",
         "sm:flex-row sm:items-center sm:justify-between sm:from-prime-100 sm:to-accent-100 sm:py-5",
       )}
     >
@@ -26,14 +26,16 @@ function IntroSection() {
       </div>
       <div
         className={twMerge(
-          "flex h-[500px] flex-col justify-around gap-4 px-4 text-center text-accent-100",
+          "flex h-[500px] flex-col justify-around gap-4 px-4 py-4 text-center",
           "sm:static sm:w-1/2 sm:justify-normal sm:gap-8 sm:text-start",
         )}
       >
-        <h1 className={twMerge("text-4xl")}>Welcome to Jaifa Academy</h1>
+        <h1 className={twMerge("text-4xl")}>
+          Welcome to <b>Jaifa Academy</b>
+        </h1>
 
-        <h2 className={twMerge("text-xl sm:text-xl")}>
-          &#34;Where Passion Meets Opportunity&#34;
+        <h2 className={twMerge("text-2xl sm:text-2xl")}>
+          &#34;Where <b>Passion</b> Meets <b>Opportunity</b>&#34;
         </h2>
         <p className="">
           At Jaifa Academy, we believe in nurturing talent, fostering

@@ -29,7 +29,7 @@ function ButtonTopScroll() {
           viewBox="0 0 24 24"
           strokeWidth={1.5}
           stroke="currentColor"
-          className="size-10 text-accent-100 transition-all duration-300 hover:scale-110"
+          className="size-10 text-complementary-100 transition-all duration-300 hover:scale-110"
         >
           <path
             strokeLinecap="round"
@@ -37,7 +37,7 @@ function ButtonTopScroll() {
             d="m15 11.25-3-3m0 0-3 3m3-3v7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
           />
         </svg>
-        <strong className="text-accent-100">TOP</strong>
+        <strong className="text-complementary-100">TOP</strong>
       </div>
     </button>
   );
