@@ -25,8 +25,9 @@ function IntroSection() {
         />
       </div>
       <div
+        id="text-frame"
         className={twMerge(
-          "flex h-[500px] flex-col justify-around gap-4 px-4 py-4 text-center",
+          "flex h-[500px] flex-col justify-between px-4 py-4 text-center",
           "sm:static sm:w-1/2 sm:justify-normal sm:gap-8 sm:text-start",
         )}
       >
@@ -37,7 +38,7 @@ function IntroSection() {
         <h2 className={twMerge("text-2xl sm:text-2xl")}>
           &#34;Where <b>Passion</b> Meets <b>Opportunity</b>&#34;
         </h2>
-        <p className="">
+        <p className="text-base sm:text-sm lg:text-base">
           At Jaifa Academy, we believe in nurturing talent, fostering
           discipline, and providing the best environment for both young players
           and football enthusiasts to thrive. Our state-of-the-art facilities

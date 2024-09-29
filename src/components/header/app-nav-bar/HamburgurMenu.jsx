@@ -22,7 +22,7 @@ function HamburgurMenu({ onClick, open }) {
         animate={animate}
         variants={{ open: { rotate: "360deg" }, closed: { rotate: "0deg" } }}
         className={twMerge(
-          "relative h-9 w-10 rounded-sm duration-100",
+          "relative h-9 w-10 rounded-sm duration-200",
           "bg-complementary-100/25",
         )}
       >

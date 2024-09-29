@@ -24,9 +24,8 @@ function AppNavBar({ className }) {
   return (
     <motion.nav
       className={twMerge(
-        "absolute inset-0 z-30 h-screen w-auto overflow-hidden transition-all duration-200",
+        "absolute inset-0 z-30 h-screen w-auto overflow-hidden transition-all duration-75",
         "sm:static sm:h-auto sm:w-screen",
-
         className,
       )}
       animate={open ? "open" : "closed"}
@@ -64,10 +63,10 @@ function AppNavBar({ className }) {
                   each.to === "/" &&
                   "underline underline-offset-8 hover:underline-offset-4",
                 scrollDirection === "up" &&
-                  scrollPosition > 100 &&
+                  scrollPosition > 110 &&
                   "sticky top-0",
                 scrollDirection === "down" &&
-                  scrollPosition > 100 &&
+                  scrollPosition > 110 &&
                   "sticky -top-full",
               )}
               to={each.to}
