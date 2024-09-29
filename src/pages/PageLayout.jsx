@@ -4,6 +4,7 @@ import { twMerge } from "tailwind-merge";
 import Logo from "../components/header/Logo";
 import useDetectScroll from "../hooks/useDetectScroll";
 import ButtonTopScroll from "../components/utils/ButtonTopScroll";
+import Footer from "../components/Footer";
 
 function PageLayout() {
   const { scrollDirection, scrollPosition } = useDetectScroll();
@@ -32,6 +33,9 @@ function PageLayout() {
 
         <ButtonTopScroll />
       </main>
+      <footer>
+        <Footer />
+      </footer>
     </>
   );
 }

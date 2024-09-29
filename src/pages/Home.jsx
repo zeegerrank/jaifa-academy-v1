@@ -8,7 +8,6 @@ function Home() {
       <IntroSection />
       <Divider />
       <FacilitySection />
-      <Divider />
     </>
   );
 }

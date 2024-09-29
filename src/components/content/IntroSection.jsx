@@ -45,9 +45,7 @@ function IntroSection() {
           are designed to support not only competitive athletes but also
           families and community members who share a passion for football.
         </p>
-        <ButtonCommon onClick={() => navigate("contact")}>
-          About Us
-        </ButtonCommon>
+        <ButtonCommon onClick={() => navigate("about")}>About Us</ButtonCommon>
       </div>
     </section>
   );

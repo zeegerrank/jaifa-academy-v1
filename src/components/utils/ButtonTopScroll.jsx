@@ -7,7 +7,7 @@ function ButtonTopScroll() {
   const [show, setShow] = useState(false);
 
   useEffect(() => {
-    scrollPosition > document.body.offsetHeight / 4
+    scrollPosition > document.body.offsetHeight / 3
       ? setShow(true)
       : setShow(false);
   }, [scrollPosition]);
@@ -16,7 +16,7 @@ function ButtonTopScroll() {
     <button
       onClick={() => scrollTo({ top: 0, behavior: "smooth" })}
       className={twMerge(
-        "transition-all duration-700",
+        "transition-all duration-500",
         show
           ? "fixed bottom-5 right-5 bg-accent-100/30 opacity-100"
           : "-bottom-full opacity-0",
