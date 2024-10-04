@@ -26,7 +26,7 @@ function PageLayout() {
         )}
       >
         <Logo />
-        <AppNavBar className="" />
+        <AppNavBar />
       </header>
       <main className={twMerge("relative z-20")}>
         <Outlet />

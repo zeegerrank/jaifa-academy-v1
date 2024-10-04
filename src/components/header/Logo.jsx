@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { twMerge } from "tailwind-merge";
 import useDetectScroll from "../../hooks/useDetectScroll";
 import { useEffect, useState } from "react";
@@ -8,9 +8,16 @@ function Logo() {
   useEffect(() => {
     scrollPosition > 200 ? setHide(true) : setHide(false);
   }, [scrollDirection, scrollPosition]);
+  const location = useLocation();
 
   return (
     <Link
+      to="/"
+      onClick={() =>
+        location.pathname === "/"
+          ? scrollTo({ top: 0, behavior: "smooth" })
+          : null
+      }
       className={twMerge(
         "flex h-[100px] w-[100px] items-center sm:ml-6",
         "transition-all duration-500 hover:rotate-2 hover:scale-110",
