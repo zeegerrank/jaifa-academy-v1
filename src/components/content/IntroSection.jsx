@@ -1,9 +1,11 @@
 import { useNavigate } from "react-router-dom";
 import { twMerge } from "tailwind-merge";
 import ButtonCommon from "../utils/ButtonCommon";
+import { useTranslation } from "react-i18next";
 
 function IntroSection() {
   const navigate = useNavigate();
+  const { i18n } = useTranslation();
 
   return (
     <section
@@ -31,12 +33,32 @@ function IntroSection() {
           "sm:static sm:w-1/2 sm:justify-normal sm:gap-8 sm:text-start",
         )}
       >
-        <h1 className={twMerge("text-4xl")}>
-          Welcome to <b>Jaifa Academy</b>
+        <h1 className={twMerge("text-5xl")}>
+          {i18n.language === "th" && (
+            <>
+              ยินดีต้อนรับสู่
+              <br />
+              <b>ใจฟ้า อคาเดมี่</b>
+            </>
+          )}
+          {i18n.language === "en" && (
+            <>
+              Welcome to <br />
+              <b>Jaifa Academy</b>
+            </>
+          )}
         </h1>
-
         <h2 className={twMerge("text-2xl sm:text-2xl")}>
-          &#34;Where <b>Passion</b> Meets <b>Opportunity</b>&#34;
+          {i18n.language === "en" && (
+            <>
+              &#34;Where <b>Talent</b> Meets <b>Opportunity</b>&#34;
+            </>
+          )}
+          {i18n.language === "th" && (
+            <>
+              &#34;พื้นที่ที่เราพา <b>พรสวรรค์</b> มาพบกับ <b>โอกาส</b>&#34;
+            </>
+          )}
         </h2>
         <p className="text-base sm:text-sm lg:text-base">
           At Jaifa Academy, we believe in nurturing talent, fostering

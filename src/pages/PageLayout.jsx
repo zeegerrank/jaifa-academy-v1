@@ -14,14 +14,14 @@ function PageLayout() {
       <header
         className={twMerge(
           "z-30 bg-prime-100 transition-all duration-300",
-          "flex justify-center",
+          "flex flex-col items-center justify-center",
           "sm:flex-col sm:items-center",
           "transition-all duration-500",
           scrollDirection === "up" &&
-            scrollPosition > 100 &&
+            scrollPosition > 150 &&
             "sticky top-0 bg-prime-100/90",
           scrollDirection === "down" &&
-            scrollPosition > 100 &&
+            scrollPosition > 150 &&
             "sticky -top-full bg-prime-100/90",
         )}
       >

@@ -6,7 +6,7 @@ function Logo() {
   const { scrollDirection, scrollPosition } = useDetectScroll();
   const [hide, setHide] = useState(false);
   useEffect(() => {
-    scrollPosition > 110 ? setHide(true) : setHide(false);
+    scrollPosition > 200 ? setHide(true) : setHide(false);
   }, [scrollDirection, scrollPosition]);
 
   return (
