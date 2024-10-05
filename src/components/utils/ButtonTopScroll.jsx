@@ -7,7 +7,7 @@ function ButtonTopScroll() {
   const [show, setShow] = useState(false);
 
   useEffect(() => {
-    scrollPosition > document.body.offsetHeight / 10
+    scrollPosition > document.body.offsetHeight / 5
       ? setShow(true)
       : setShow(false);
   }, [scrollPosition]);

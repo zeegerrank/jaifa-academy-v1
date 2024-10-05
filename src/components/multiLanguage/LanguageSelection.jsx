@@ -10,13 +10,8 @@ function LanguageSelection() {
   useTranslation();
 
   return (
-    <div
-      className={twMerge(
-        "flex w-screen justify-center",
-        "border border-red-500",
-      )}
-    >
-      <div className={twMerge("border border-red-500", "flex gap-2")}>
+    <div className={twMerge("flex w-screen justify-center")}>
+      <div className={twMerge("flex gap-2")}>
         <button
           className={twMerge(
             "bg-slate-900/30 p-1",

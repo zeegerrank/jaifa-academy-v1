@@ -1,7 +1,7 @@
 import { Outlet } from "react-router-dom";
 import AppNavBar from "../components/header/app-nav-bar/AppNavBar";
 import { twMerge } from "tailwind-merge";
-import Logo from "../components/header/Logo";
+import Logo from "../components/Logo";
 import useDetectScroll from "../hooks/useDetectScroll";
 import ButtonTopScroll from "../components/utils/ButtonTopScroll";
 import Footer from "../components/Footer";
