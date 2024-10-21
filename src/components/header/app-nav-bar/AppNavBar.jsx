@@ -27,8 +27,8 @@ function AppNavBar({ className }) {
       <LanguageSelection />
       <motion.nav
         className={twMerge(
-          "absolute inset-0 z-30 h-screen w-auto overflow-hidden transition-all duration-75",
-          "sm:static sm:h-auto sm:w-screen",
+          "absolute inset-0 z-30 h-screen min-h-10 w-auto overflow-hidden transition-all duration-75",
+          "sm:static sm:h-auto sm:w-full",
           className,
         )}
         animate={open ? "open" : "closed"}
@@ -41,10 +41,10 @@ function AppNavBar({ className }) {
         <ul
           className={twMerge(
             "absolute flex flex-col sm:flex-wrap",
-            "h-screen w-screen justify-around",
+            "h-screen w-full justify-around",
             "transition-all duration-700",
             open ? "left-0" : "left-full",
-            "sm:relative sm:left-auto sm:h-[50px] sm:w-screen sm:flex-row",
+            "sm:relative sm:left-auto sm:h-[50px] sm:w-full sm:flex-row",
           )}
         >
           {/* for navMenuButton additional
@@ -59,7 +59,7 @@ function AppNavBar({ className }) {
                   "flex h-dvh items-center justify-center bg-prime-100/95 text-sm font-semibold text-accent-200",
                   "border-b-2 border-b-accent-100/30",
                   "transition-all duration-150 hover:bg-complementary-100/10 hover:sm:border-b-4 hover:sm:border-accent-100 hover:sm:shadow",
-                  "sm:h-auto sm:w-1/3 sm:border-b-2 sm:border-b-accent-100/10 sm:bg-prime-100/10 sm:px-8",
+                  "sm:h-auto sm:w-1/3 sm:border-b-2 sm:border-b-accent-100/10 sm:bg-prime-100/10",
                   each.to === currPage &&
                     "underline underline-offset-8 hover:underline-offset-4",
                   currPage.length === 0 &&

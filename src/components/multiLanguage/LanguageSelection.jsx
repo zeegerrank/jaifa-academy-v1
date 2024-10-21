@@ -6,11 +6,11 @@ function LanguageSelection() {
   const changeLanguage = (lang) => {
     i18n.changeLanguage(lang);
   };
-  /** useTranslation is used to detect current langauage */
+  /** useTranslation is used to detect current language */
   useTranslation();
 
   return (
-    <div className={twMerge("flex w-screen justify-center")}>
+    <div className={twMerge("z-50 flex w-full justify-center py-2")}>
       <div className={twMerge("flex gap-2")}>
         <button
           className={twMerge(

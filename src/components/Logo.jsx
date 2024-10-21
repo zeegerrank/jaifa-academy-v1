@@ -22,14 +22,14 @@ function Logo({ className }) {
       className={twMerge(
         "flex h-[120px] w-[120px] items-center sm:ml-6",
         "transition-all duration-500 hover:rotate-2 hover:scale-110",
-        hide && "sm:h-0",
+        hide && "h-0",
         className,
       )}
     >
       <img
         className={twMerge(
           "h-auto object-contain transition-all",
-          hide && "sm:h-0",
+          hide && "h-0",
           className,
         )}
         src="/jaifa-academy_logo.png"

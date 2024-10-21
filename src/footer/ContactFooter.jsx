@@ -33,7 +33,7 @@ function ContactFooter() {
     <div className={twMerge("flex flex-col gap-3 px-10", "sm:px-0")}>
       <h1 className="font-bold">Contact</h1>
       <div className={twMerge("flex flex-col gap-1 py-2")}>
-        <Link className={twMerge("flex items-center")}>
+        <Link className={twMerge("flex items-center gap-2")}>
           <i className="fa-solid fa-map-location-dot fa-2x"></i>
           <span className="text-balance underline">
             {" "}
