@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 import { twMerge } from "tailwind-merge";
-import Logo from "../components/Logo";
-import Divider from "../components/Divider";
-import nav_menu from "../data/nav_menu.json";
+import Logo from "../Logo";
+import Divider from "../Divider";
+import nav_menu from "../../data/nav_menu.json";
 import ContactFooter from "./ContactFooter";
 
 const associate = [
